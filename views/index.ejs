@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+<div class="container">
+		<header class="jumbotron">
+			<div class="container">
+				<h3>Welcome to PCI Inventory Application!</h3>
+				<p>This app will make our jobs a lot easier!</p>
+				<p>
+					<a class="btn btn-primary" href="/inventories/new">Add new inventory</a>
+				</p>
+			</div>
+		</header>
+
+		<div>
+			<% inventories.forEach(function(inventory){ %>
+					<table class="table">
+						<tr>
+							<td><span><%= inventory.host %></span></td>
+							<td><span><%= inventory._id %></span></td>
+							<td><span><%= inventory.software %></span></td>
+							<td><span><%= inventory.application %></span></td>
+							<td><span><%= inventory.ip_address %></span></td>
+							<td><span><%= inventory.business_process %></span></td>
+							<td><span><%= inventory.email %></span></td>
+							<td>
+								<form action="/inventories/<%= inventory._id %>?_method=DELETE" method="POST">
+									<button class="btn btn-primary btn-md">delete</button>
+								</form>
+							</td>
+							
+						</tr>
+					</table>
+								
+			<% }); %>	
+		</div>	
+	</div>
+
+
+
+
+
+</body>
+</html>

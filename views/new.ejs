@@ -1,0 +1,61 @@
+<% include partials/header %>
+
+	<div class="divs jumbotron">
+		<form action="/inventories" method="POST">
+			<div class="form-group row">
+				<h2>Add a new record for PCI INVENTORY </h2>
+			</div>
+			<div class="form-group row">
+			  	<label for="example-text-input" class="col-2 col-form-label">HOST</label>
+				<div class="col-10">
+			    	<input class="form-control" type="text" placeholder="test.walmart.com" name="host">
+			  	</div>
+			</div>
+			
+			<div class="form-group row">
+			  	<label for="example-email-input" class="col-2 col-form-label">SOFTWARE</label>
+			  	<div class="col-10">
+			    	<input class="form-control" type="text" placeholder="pangaea" id="example-email-input" name="software">
+			  	</div>
+			</div>
+			
+			<div class="form-group row">
+			  	<label for="example-url-input" class="col-2 col-form-label">APPLICATION</label>
+			  	<div class="col-10">
+			    	<input class="form-control" type="text" placeholder="payments" id="example-url-input" name="application">
+			  	</div>
+			</div>
+			
+			<div class="form-group row">
+			  	<label for="ip" class="col-2 col-form-label">IP ADDRESS</label>
+			  	<div class="col-10">
+			    	<input name="ip" id="ip" class="form-control" type="text" required pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$" placeholder="10.0.0.10" name="ip_address">
+			  	</div>
+			</div>
+			
+			<div class="form-group row">
+			  	<label for="example-password-input" class="col-2 col-form-label">BUSINESS PROCESS</label>
+			  	<div class="col-10">
+			    	<input class="form-control" type="text" placeholder="incremental" id="example-password-input" name="business_process">
+			  </div>
+			  </div>
+			  
+			<div class="form-group row">
+			  	<label for="example-password-input" class="col-2 col-form-label">CONTACT EMAIL</label>
+			  	<div class="col-10">
+			    	<input class="form-control" type="email" placeholder="pangaea@hotmail.com" id="example-password-input" name="email">
+			  	</div>
+
+			</div>
+			<span>
+				<button class="btn btn-danger active" type="submit" >Submit</button>
+			</span>
+			<!-- <span>
+				<button class="btn btn-warning active" type="submit" >Inventory List</button>
+			</span>	 -->	
+		</form>
+		<a href="/inventories">Go Back</a>
+		</div>
+
+		</body>
+</html>
